@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+:root{
+    --headline-color: #ffffff;
+    --background-color: #181717;
+    --text-color: rgba(255,255,255,0.5);
+    --main-gray: #606060;
+}
+html{
+}
+html, body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: var(--background-color);
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-color);
+    overscroll-behavior: none;
+}
+
+.c-pad{
+    padding-block: 5vh;
+}
+.screen-h{
+    min-height: 100dvh;
+}
+
+/*=============================================
+=            typography            =
+=============================================*/
+
+.heading-1{
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 97.2%; /* 58.32px */
+    letter-spacing: -0.8px;
+}
+.heading-2{
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 117%; /* 37.44px */
+    letter-spacing: -0.96px;
+}
+
+.body-text{
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 121.5%; /* 21.87px */
+    letter-spacing: -0.54px;
+}
+
+.p-md{
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 121.5%; /* 17.01px */
+    letter-spacing: -0.42px;
+}
+
+.sub-header, .link{
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 121.5%; /* 21.87px */
+    letter-spacing: -0.54px;
+    text-decoration-line: underline;
+}
+
+.sub-text{
+    color: var(--main-gray);
+}
+
+.navigation{
+
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 120%; /* 25.2px */
+    letter-spacing: -0.63px;
+}
+a{
+    display: block;
+    text-decoration: none;
+    color: var(--headline-color);
+}
+
+/*=====  End of typography  ======*/
+
+
+
+
+section{
+    position: relative;
+    display: block;
+}
+.separator-line{
+    background: var(--headline-color);
+    height: 2px;
+    width: 100%;
+    margin-block: 40px;
+}
+#sec-spacer{
+    pointer-events: none;
+    z-index: -1;
+}
+.hero-section .h1{
+    font-size: clamp(30px,2.5vw,150px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.8px;
+    color: var(--headline-color);
+    text-shadow: rgba(255, 255, 255, 0.502) 0px 0px 24px; 
+}
+#sec-2.hero-section .h1{
+    font-size: clamp(14px,2.5vw,150px);
+
+}
+.hero-section .h1 span{
+    display: block;
+}
+.hero-section .h1 span img{
+    width: 100%;
+    width: 100%;
+  max-width: 40px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.hero-section .content-container{
+    position: relative;
+    z-index: 2;
+}
+.hero-section .bg-showreel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+.hero-section .bg-showreel video{
+    aspect-ratio: 21/9;
+}
+.hero-section .bg-showreel::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: #000000c1;
+}
+#sec-2{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+#sec-2.hero-section .welcome-lines{
+    transform: scale(10);
+    opacity: 0;
+}
+#sec-2.hero-section .h1 span img{
+    margin-bottom: 0;
+}
+
+
+.canvas-section{
+    background: var(--background-color);
+}
+.canvas-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.headline-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+}
+
+#text-behind, #text-front, #text-behind-blur {
+    font-family: 'Open Sans', sans-serif;
+
+    position: absolute;
+    text-align: center;
+    font-size: clamp(24px, 20vw, 200px);
+    /* text-transform: uppercase; */
+    font-weight: 800;
+    letter-spacing: 10px;
+    line-height: 0.8;
+}
+
+#text-behind{
+    color: var(--headline-color);
+    z-index: 1;
+}
+
+#text-behind-blur{
+    color: var(--headline-color);
+    filter: blur(7.5px);
+    -webkit-filter: blur(7.5px);
+    z-index: 0;
+}
+
+#text-front{
+    color: transparent;
+    text-stroke:2px var(--headline-color);
+    -webkit-text-stroke: 2px var(--headline-color);
+    z-index: 3;
+}
+
+
+
+/*=============================================
+=            intro section            =
+=============================================*/
+
+.intro-content > *{
+    text-align: left;
+    
+}
+
+.intro-content h1{
+    color: var(--headline-color);
+    margin-bottom: 100px;
+}
+
+.intro-content h2.heading-2:nth-child(2){
+    margin-bottom: 32px;
+
+}
+
+.skill-content{
+    margin-top: 100px;
+}
+
+.skill-content .single-skill{
+     display: flex;
+}
+.skill-content .single-skill > *{
+    color: var(--headline-color);
+    text-align: left;
+}
+
+.skill-content .single-skill a{
+    text-decoration: underline;
+}
+.skill-content .single-skill .skills p:nth-child(2){
+    margin-top: 24px;
+}
+
+.skill-content .single-skill{
+    margin-top: 70px;
+}
+.skill-content .single-skill .skills p.body-text > img{
+    height: 35px;
+}
+
+
+.intro-preview{
+    text-align: right;
+}
+
+
+/*=====  End of intro section  ======*/
+
+
+
+
+/*=============================================
+=            CTA section            =
+=============================================*/
+.single-cta > a.next-project{
+    max-width: 350px;
+    text-align: left;
+    width: fit-content;
+}
+.single-cta > a.next-project > svg{
+    margin-left: 20px;
+}
+.single-cta > a.mail-link{
+    width: fit-content;
+}
+.single-cta > a.mail-link ~ a{
+    margin-top: 27px;
+    color: var(--headline-color);
+    width: fit-content;
+}
+
+
+
+.bottom-footer{
+    margin-top: 170px;
+}
+.bottom-footer a{
+    color: var(--headline-color);
+    width: fit-content;
+}
+.bottom-footer .right-links > a:not(:last-child){
+    margin-right: 30px;
+}
+
+/*=====  End of CTA section  ======*/
+
+
+
+
+
+
+@media(max-width:576px){
+    #text-behind, #text-front, #text-behind-blur{
+        font-size: 50px;
+    }
+}
+
