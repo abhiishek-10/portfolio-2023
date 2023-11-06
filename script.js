@@ -325,19 +325,23 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
 
-    document.querySelectorAll('.intro-preview').forEach(el => {
-        gsap.to(el.querySelector('img'), {
-            y: 200,
-            scrollTrigger: {
-                trigger: el.querySelector('img'),
-                start: 'center center',
-                endTrigger: el.querySelector('img'),
-                end: 'bottom+=200 bottom-=200',
-                scrub: 1,
-                // markers: true,
-            }
+    if (window.innerWidth > 768) {
+        document.querySelectorAll('.intro-preview').forEach(el => {
+            gsap.to(el.querySelector('img'), {
+                y: 200,
+                scrollTrigger: {
+                    trigger: el.querySelector('img'),
+                    start: 'center center',
+                    endTrigger: el.querySelector('img'),
+                    end: 'bottom+=200 bottom-=200',
+                    scrub: 1.5,
+                    // markers: true,
+                }
+            })
         })
-    })
+
+    }
+    document.getElementById('showreel-vid').play();
 
 
 })

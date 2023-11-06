@@ -333,12 +333,83 @@ section{
 
 
 
+@media(max-width:991px){
+
+    /*=============================================
+    =            Intro section            =
+    =============================================*/
+    
+    .intro-content h1{
+        margin-bottom: 40px;
+    }
+    
+    .intro-content{
+        margin-bottom: 40px;
+    }
+    .intro-preview{
+        display: none;
+    }
+    
+    .intro-section{
+        min-height: unset;
+        padding-bottom: 0;
+    }
+    .img-stick{
+        padding-top: 0;
+        min-height: unset;
+    }
+    
+    /*=====  End of Intro section  ======*/
 
 
+    /*=============================================
+    =            CTA            =
+    =============================================*/
+    
+    .single-cta > a{
+        font-size: 21px;
+    }
+    .single-cta > a.mail-link ~ a{
+        margin-top: 20px;
+    }
+    
+    
+    /*=====  End of CTA  ======*/
+    
+    
+
+
+}
+
+@media(max-width:768px){
+
+    .cta-main .cta-links{
+    }
+    .single-cta > a.next-project{
+        margin-bottom: 40px;
+    }
+    .bottom-footer {
+        margin-top: 80px;
+    }
+    .bottom-footer .left-links{
+        margin-bottom: 30px;
+    }
+    .bottom-footer a{
+        margin-inline: auto ;
+    }
+}
 
 @media(max-width:576px){
+
+
     #text-behind, #text-front, #text-behind-blur{
         font-size: 50px;
     }
+
+
+
+    
+    
+
 }
 
