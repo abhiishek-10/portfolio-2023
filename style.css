@@ -109,6 +109,9 @@ body::-webkit-scrollbar {
 .sub-text{
     color: var(--main-gray);
 }
+.w-reg{
+    font-weight: 400;
+}
 
 .navigation{
 
@@ -149,7 +152,7 @@ section{
     justify-content: center;
     letter-spacing: 0.8px;
     color: var(--headline-color);
-    text-shadow: rgba(255, 255, 255, 0.502) 0px 0px 24px; 
+    text-shadow: rgba(255, 255, 255, 0.177) 0px 0px 24px; 
 }
 #sec-2.hero-section .h1{
     font-size: clamp(14px,2.5vw,150px);
@@ -411,6 +414,62 @@ section{
         transform: rotate(360deg);
     }
 }
+
+.single-project{
+    padding-block: 50px;
+}
+.single-project .separator-line{
+    margin-block: 150px;
+}
+
+.single-project .project-content{
+    position: relative;
+}
+.single-project .project-content .project-name{
+    margin-bottom: 25px;
+}
+.single-project .project-content .project-name p{
+    color: #fff;
+    text-decoration: none;
+}
+ .project-name p:not(:last-child){
+    margin-bottom: 10px;
+}
+
+
+.single-project .project-content .project-concept{
+    margin-bottom: 36px;
+}
+.single-project .project-content .project-concept p{
+    color: #fff;
+    text-decoration: none;
+    max-width: 90%;
+}
+ .project-concept p:not(:last-child){
+    margin-bottom: 12px;
+}
+
+.single-project .project-link{
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+}
+.single-project .project-link svg{
+    margin-left: 5px;
+    width: 18px;
+    rotate: -45deg;
+}
+
+.single-project .project-img{
+    text-align: right;
+}
+.single-project .project-img img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    max-height: 400px;
+}
+
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ******************** End of Projects page ********************
