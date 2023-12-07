@@ -367,6 +367,56 @@ section{
 
 
 
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+******************** Projects page ********************
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.projects-intro{
+    color: #fff;
+}
+
+.scroll-down-arrow{
+    position: absolute;
+    background: #fff;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    bottom: -160%;
+    top: auto;
+    left: 0;
+    transition: 1s cubic-bezier(.74,.01,.16,1);
+}
+.scroll-down-arrow:hover{
+    scale: 1.4;
+}
+.scroll-down-arrow svg path{
+    fill: #000;
+}
+.scroll-down-arrow svg.circular-text{
+    position: absolute;
+    height: 80%;
+    width: 80%; 
+    animation: rotate 5s cubic-bezier(.75,0,.16,1.01) infinite alternate;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+******************** End of Projects page ********************
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
 @media(max-width:991px){
 
     /*=============================================
