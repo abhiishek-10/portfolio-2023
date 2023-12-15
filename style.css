@@ -83,7 +83,7 @@ body::-webkit-scrollbar
 
 .heading-1
 {
-    font-size: 60px;
+    font-size: 3.75rem;
     font-weight: 500;
     line-height: 97.2%;
     /* 58.32px */
@@ -92,7 +92,7 @@ body::-webkit-scrollbar
 
 .heading-2
 {
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 400;
     line-height: 117%;
     /* 37.44px */
@@ -364,9 +364,19 @@ a
         flex-direction: column-reverse;
     }
 
+    .custom-nav .custom-col
+    {
+        align-items: center;
+    }
+
     .nav-logo
     {
         display: none;
+    }
+
+    .nav-links-group
+    {
+        align-items: center;
     }
 
     .nav-socials
@@ -918,6 +928,7 @@ section
 
 @media(max-width:768px)
 {
+
 
     .cta-main .cta-links
     {}
