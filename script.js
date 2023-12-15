@@ -84,7 +84,7 @@ if (isFirefox == false) {
 
 // Hacker text hover
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const elements = [...document.querySelectorAll("a.navigation")]
+const elements = [...document.querySelectorAll("a.h-effect")]
 elements.map(element => {
 
     element.onmouseover = event => {
@@ -117,48 +117,113 @@ elements.map(element => {
 // Pre loader
 $(document).ready(function () {
 
-    const preLoaderTl = gsap.timeline();
+    preLoader();
 
-    preLoaderTl.to("body", {
-        overflow: "hidden"
+    $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 300) {
+            $(".navbar").addClass("scrolled");
+        } else {
+            $(".navbar").removeClass("scrolled");
+        }
+    });
+
+    const headerTl = gsap.timeline({
+        paused: true
     })
-        .to(".preloader .text-container", {
-            duration: 0,
-            opacity: 1,
-            ease: "Power3.easeOut"
+    const animateOpenNav = () => {
+        headerTl.to("#nav-container", 0.2, {
+            autoAlpha: 1,
+            delay: 0.1
         })
-        .from(".preloader .text-container p", {
-            duration: 1.5,
-            delay: 1,
-            y: 70,
-            skewY: 10,
-            stagger: 0.4,
-            ease: "Power3.easeOut"
-        })
-        .to(".preloader .text-container p", {
-            duration: 1.2,
-            y: 80,
-            skewY: -20,
-            stagger: 0.2,
-            ease: "Power3.easeOut"
-        })
-        .to(".preloader", {
-            duration: 1.5,
-            height: "0vh",
-            ease: "Power3.easeOut"
-        })
-        .to(
-            "body",
-            {
-                overflow: "hidden auto"
-            },
-            "-=2"
-        )
-        .to(".preloader", {
-            display: "none"
-        });
-    if ($('body').hasClass('home')) {
-        document.getElementById('showreel-vid').play();
-    }
 
+        headerTl.from(".flex > div", 0.4, {
+            opacity: 0,
+            y: 10,
+            stagger: {
+                amount: 0.04
+            },
+        })
+
+        headerTl.to(".nav-link > a", 0.8, {
+            top: 0,
+            ease: "power2.inOut",
+            stagger: {
+                amount: 0.1
+            }
+        }, "-=0.4")
+
+        headerTl.from('.nav-footer', 0.3, {
+            opacity: 0,
+        }, "-=0.5").reverse();
+
+    }
+    const openNav = () => {
+        animateOpenNav();
+
+        const navBtn = document.getElementById('menu-toggle-btn');
+        navBtn.onclick = function (e) {
+            navBtn.classList.toggle('active');
+            if (navBtn.classList.contains('active')) {
+                lenis.stop();
+            } else {
+                lenis.start();
+            }
+            headerTl.reversed(!headerTl.reversed())
+        }
+    }
+    openNav();
+
+
+
+    function preLoader() {
+
+        const preLoaderTl = gsap.timeline();
+
+        preLoaderTl.to("body", {
+            overflow: "hidden"
+        })
+            .to(".preloader .text-container", {
+                duration: 0,
+                opacity: 1,
+                ease: "Power3.easeOut"
+            })
+            .from(".preloader .text-container p", {
+                duration: 1.5,
+                delay: 1,
+                y: 70,
+                skewY: 10,
+                stagger: 0.4,
+                ease: "Power3.easeOut"
+            })
+            .to(".preloader .text-container p", {
+                duration: 1.2,
+                y: 80,
+                skewY: -20,
+                stagger: 0.2,
+                ease: "Power3.easeOut"
+            })
+            .to(".preloader", {
+                duration: 1.5,
+                height: "0vh",
+                ease: "Power3.easeOut"
+            })
+            .to(
+                "body",
+                {
+                    overflow: "hidden auto"
+                },
+                "-=2"
+            )
+            .to(".preloader", {
+                display: "none"
+            });
+        if ($('body').hasClass('home')) {
+            document.getElementById('showreel-vid').play();
+        }
+
+    }
 })
+
+

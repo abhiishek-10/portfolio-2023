@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let tl1 = gsap.timeline({
         scrollTrigger: {
-            trigger: '#sec-1 p',
+            trigger: '#sec-1 h1',
             start: 'center+=100 center',
             endTrigger: '#sec-1',
             end: 'bottom center',
@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
-    tl1.to('#sec-1 p', {
+    tl1.to('#sec-1 h1', {
         scale: 0.5,
         opacity: 0,
     })
