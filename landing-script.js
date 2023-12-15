@@ -114,7 +114,11 @@ objloader.load(
     './assets/buddha.obj',
     (object) => {
         object.children[0].material = material1;
-        object.scale.setScalar(20);
+        if (window.innerWidth < 575) {
+            object.scale.setScalar(15);
+        } else {
+            object.scale.setScalar(20);
+        }
         object.position.set(0, -0.25, 0);
         group.add(object);
     },

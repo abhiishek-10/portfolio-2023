@@ -756,7 +756,7 @@ section
 
 .scroll-down-arrow:hover
 {
-    scale: 1.4;
+    transform: scale(1.4);
 }
 
 .scroll-down-arrow svg path
@@ -869,6 +869,23 @@ section
 
 @media(max-width:991px)
 {
+    .heading-1
+    {
+        font-size: 2.5rem;
+        font-weight: 500;
+        line-height: 97.2%;
+        /* 58.32px */
+        letter-spacing: -0.8px;
+    }
+
+    .heading-2
+    {
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 117%;
+        /* 37.44px */
+        letter-spacing: -0.96px;
+    }
 
     /*=============================================
     =            Intro section            =
@@ -876,7 +893,7 @@ section
 
     .intro-content h1
     {
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
 
     .intro-content
@@ -895,10 +912,25 @@ section
         padding-bottom: 0;
     }
 
+    .intro-content h2.heading-2:nth-child(2)
+    {
+        margin-bottom: 22px;
+    }
+
     .img-stick
     {
         padding-top: 0;
         min-height: unset;
+    }
+
+    .skill-content
+    {
+        margin-top: 0px;
+    }
+
+    .skill-content .single-skill
+    {
+        margin-top: 60px;
     }
 
     /*=====  End of Intro section  ======*/
@@ -928,6 +960,63 @@ section
 
 @media(max-width:768px)
 {
+
+    /*=============================================
+    =            Project page            =
+    =============================================*/
+    .projects-intro-left .heading-1
+    {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .projects-intro-right .heading-2
+    {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .project-bg-pattern
+    {
+        display: none;
+    }
+
+    .scroll-down-arrow
+    {
+        bottom: -40vh;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .scroll-down-arrow:hover
+    {
+        transform: translateX(-50%) scale(1.2);
+
+    }
+
+    .single-project .project-content
+    {
+        padding-bottom: 30px;
+    }
+
+    .single-project .project-img
+    {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .single-project
+    {
+        padding-block: 0;
+    }
+
+    .single-project .separator-line
+    {
+        margin-block: 70px;
+    }
+
+    /*=====  End of Project page  ======*/
+
 
 
     .cta-main .cta-links
