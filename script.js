@@ -116,8 +116,12 @@ elements.map(element => {
 
 // Pre loader
 $(document).ready(function () {
+    const buddhaObj = new Image();
+    buddhaObj.src = "./assets/buddha.obj";
+    buddhaObj.onload = function () {
+        preLoader();
 
-    preLoader();
+    };
 
     $(window).scroll(function () {
         var scroll = $(window).scrollTop();
