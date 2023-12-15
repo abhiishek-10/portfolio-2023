@@ -116,12 +116,8 @@ elements.map(element => {
 
 // Pre loader
 $(document).ready(function () {
-    const buddhaObj = new Image();
-    buddhaObj.src = "./assets/buddha.obj";
-    buddhaObj.onload = function () {
-        preLoader();
 
-    };
+    preLoader();
 
     $(window).scroll(function () {
         var scroll = $(window).scrollTop();
@@ -219,14 +215,18 @@ $(document).ready(function () {
                     overflow: "hidden auto"
                 },
                 "-=2"
-            )
-            .to(".preloader", {
-                display: "none"
-            });
+            );
+        // .to(".preloader", {
+        //     display: "none"
+        // });
         if ($('body').hasClass('home')) {
             document.getElementById('showreel-vid').play();
         }
-
+        const buddhaObj = new Image();
+        buddhaObj.src = "./assets/buddha.obj";
+        buddhaObj.onload = function () {
+            $(".preloader").css("display", "none");
+        };
     }
 })
 
