@@ -1,8 +1,15 @@
-document.querySelector(".contact-main").onmousemove = e => {
+let bgBlog = $('.bg-blob')
+window.onmousemove = e => {
     const rect = e.target.getBoundingClientRect(),
-        x = e.clientX - rect.left,
-        y = e.clientY - rect.top;
+        x = e.clientX - window.left,
+        y = e.clientY - window.top;
 
-    e.target.style.setProperty("--mouse-x", `${x}px`);
-    e.target.style.setProperty("--mouse-y", `${y}px`);
+    bgBlog.animate({
+        // left: `${x}px`,
+        // top: `${y}px`,
+        left: `${e.clientX}px`,
+        top: `${e.clientY}px`,
+    }, { duration: 100, fill: "forwards" });
 }
+
+
