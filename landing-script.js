@@ -201,9 +201,9 @@ document.addEventListener('DOMContentLoaded', () => {
         scale: 0.5,
         opacity: 0,
     })
-    tl1.to('.bg-showreel', {
-        opacity: 0
-    })
+    // tl1.to('.bg-showreel', {
+    //     opacity: 0
+    // })
 
     let tl2 = gsap.timeline({
         scrollTrigger: {
