@@ -7,7 +7,10 @@
     --background-color: #181717;
     --text-color: rgba(255, 255, 255, 0.5);
     --main-gray: #606060;
-
+    --purple: rgb(123, 31, 162);
+    --violet: rgb(103, 58, 183);
+    --pink: rgb(244, 143, 177);
+    --cyan: rgb(148, 210, 255);
 }
 
 html
@@ -435,6 +438,69 @@ section
     z-index: -1;
 }
 
+.hero-section .bg-elems
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: transparent;
+    transition: 0.7s;
+
+}
+
+.hero-section .bg-elems #bubbles
+{
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    position: absolute;
+    filter: blur(10px);
+}
+
+.hero-section .bg-elems #bubbles .bubble
+{
+    border-radius: 50%;
+    position: absolute;
+    top: 100%;
+}
+
+.hero-section .bg-elems .grid
+{
+    position: relative;
+    --mask-image: radial-gradient(110% 180% at top center, white, transparent 50%);
+    mask-image: var(--mask-image);
+    -webkit-mask-image: var(--mask-image);
+    opacity: 20%;
+    position: relative;
+
+}
+
+.hero-section .bg-elems .glow
+{
+    width: 90%;
+    height: 150px;
+    background: linear-gradient(90deg, #e44141, #4f2af3);
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    filter: blur(160px);
+    -webkit-filter: blur(160px);
+    opacity: 50%;
+}
+
+.hero-section .bg-elems .grid
+{
+    stroke: white;
+}
+
 .hero-section .h1
 {
     font-size: clamp(30px, 2.5vw, 150px);
@@ -443,8 +509,99 @@ section
     justify-content: center;
     letter-spacing: 0.8px;
     color: var(--headline-color);
-    text-shadow: rgba(255, 255, 255, 0.177) 0px 0px 24px;
+    /* text-shadow: rgba(255, 255, 255, 0.177) 0px 0px 24px; */
 }
+
+.hero-section .h1>.magic
+{
+    display: inline-block;
+    position: relative;
+
+}
+
+.hero-section .h1>.magic>.magic-star
+{
+    --size: clamp(20px, 1.5vw, 30px);
+    animation: scale 700ms ease forwards;
+    display: block;
+    height: var(--size);
+    width: var(--size);
+    left: var(--star-left);
+    top: var(--star-top);
+    position: absolute;
+
+}
+
+@keyframes scale
+{
+
+    from,
+    to
+    {
+        transform: scale(0);
+    }
+
+    50%
+    {
+        transform: scale(1);
+    }
+}
+
+.hero-section .h1>.magic>.magic-star>svg
+{
+    animation: rotate 1000ms linear infinite;
+    display: block;
+    opacity: 0.7;
+
+}
+
+@keyframes rotate
+{
+    from
+    {
+        transform: rotate(0deg);
+    }
+
+    to
+    {
+        transform: rotate(180deg);
+    }
+}
+
+.hero-section .h1>.magic>.magic-star>svg>path
+{
+    fill: var(--violet);
+}
+
+.hero-section .h1>.magic>.magic-text
+{
+    animation: background-pan 3s linear infinite;
+    /* background: linear-gradient(to right,
+            var(--purple),
+            var(--violet),
+            var(--pink),
+            var(--cyan),
+            var(--purple)); */
+    background: linear-gradient(to right, #f7b6e4, #7303c0, #ec38bc, #f3c3e5);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+}
+
+@keyframes background-pan
+{
+    from
+    {
+        background-position: 0% center;
+    }
+
+    to
+    {
+        background-position: -200% center;
+    }
+}
+
 
 #sec-2.hero-section .h1
 {
@@ -452,12 +609,12 @@ section
 
 }
 
-.hero-section .h1 span
+.hero-section .h1 .namaste-emote
 {
     display: block;
 }
 
-.hero-section .h1 span img
+.hero-section .h1 .namaste-emote img
 {
     width: 100%;
     width: 100%;

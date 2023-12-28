@@ -222,6 +222,9 @@ document.addEventListener('DOMContentLoaded', () => {
         opacity: 0,
     })
 
+    // if ($('body').hasClass('home')) {
+    //     document.getElementById('showreel-vid').play();
+    // }
 
     if (window.innerWidth > 768) {
         document.querySelectorAll('.intro-preview').forEach(el => {
@@ -239,6 +242,85 @@ document.addEventListener('DOMContentLoaded', () => {
         })
 
     }
+
+    // sparkly stars
+    function sparklyStars() {
+        let index = 0,
+            interval = 1000;
+
+        const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+        const animate = star => {
+            star.style.setProperty("--star-left", `${rand(-10, 100)}%`)
+            star.style.setProperty("--star-top", `${rand(-40, 80)}%`)
+
+            star.style.animation = "none";
+            star.offsetHeight;
+            star.style.animation = "";
+        }
+        for (const star of document.getElementsByClassName('magic-star')) {
+            setTimeout(() => {
+                animate(star);
+                setInterval(() => animate(star), 1000)
+            }, index++ * (interval / 3));
+        }
+    }
+    sparklyStars();
+
+
+    // fading of BG Elements
+
+    $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        if (scroll >= 300) {
+            $('.bg-elems').css('opacity', 0);
+        } else {
+            $('.bg-elems').css('opacity', 1);
+        }
+    });
+
+
+    // Background Bubbles
+
+    function spawnBubbles() {
+
+        const bubblesContainer = document.getElementById('bubbles');
+
+        const between = (min, max) => Math.random() * (max - min) + min;
+        const colors = ['#e44141', '#4f2af3', 'rgb(123, 31, 162)', 'rgb(103, 58, 183)', 'rgb(244, 143, 177)', 'rgb(148, 210, 255)'];
+
+
+        setInterval(() => {
+
+            const bubble = document.createElement('div');
+            bubble.classList.add('bubble');
+            bubblesContainer.appendChild(bubble);
+
+            const sizePx = `${between(4, 50)}px`
+            bubble.style.width = sizePx;
+            bubble.style.height = sizePx;
+            bubble.style.opacity = `${between(20, 100)}%`;
+            bubble.style.left = `${between(0, 100)}%`;
+
+            const floatingBubbleKeyframes = [
+                { top: '100%' },
+                { top: `-${sizePx}` }
+            ]
+            const floatingAnimation = bubble.animate(
+                floatingBubbleKeyframes,
+                between(10000, 40000),
+            );
+            floatingAnimation.onfinish = () => {
+                bubblesContainer.removeChild(bubble);
+            }
+            const randomColorIndex = Math.floor(Math.random() * colors.length);
+            bubble.style.backgroundColor = colors[randomColorIndex];
+
+        }, 300);
+    }
+    spawnBubbles()
+
+
 
 })
 

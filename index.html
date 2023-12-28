@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<div class="preloader">
+<!-- <div class="preloader">
     <div class="text-container">
         <p>Just</p>
         <p>Hold</p>
         <p>On!</p>
     </div>
-</div>
+</div> -->
 
 <head>
     <meta charset="UTF-8">
@@ -25,7 +25,7 @@
 <body class="home">
     <header class="header-container">
         <div class="navbar">
-            <div class="site-logo">Creative</div>
+            <a href="index.html" class="site-logo">Creative</a>
             <div class="menu-toggle">
                 <div id="menu-toggle-btn">
                     <span></span>
@@ -64,7 +64,8 @@
                         <div class="nav-item-wrapper"></div>
                     </div>
                     <div class="nav-link">
-                        <a href="mailto:abhishekkathiriya72@gmail.com" class="navigation h-effect" data-value="Contact">Contact</a>
+                        <a href="mailto:abhishekkathiriya72@gmail.com" class="navigation h-effect"
+                            data-value="Contact">Contact</a>
                         <div class="nav-item-wrapper"></div>
                     </div>
                 </div>
@@ -85,14 +86,58 @@
 
     <main>
         <section class="hero-section screen-h d-flex align-items-center justify-content-center" id="sec-1">
-            <div class="container content-container">
-                <h1 class="h1">Namaste <span><img src="./assets/namaste-emote.png" alt="🙏"></span></h1>
+            <div class="bg-elems">
+                <div id="bubbles"></div>
+                <svg class="grid" viewBox="0 0 1600 480" fill="transparent">
+                    <pattern width="80" height="80" id="big-grid" patternUnits="userSpaceOnUse">
+                        <rect width="100%" height="100%" stroke-width="1">
+                        </rect>
+                    </pattern>
+                    <rect width="100%" height="100%" fill="url(#big-grid)">
+                    </rect>
+                    <pattern width="10" height="10" id="small-grid" patternUnits="userSpaceOnUse">
+                        <rect width="100%" height="100%" stroke-width="0.2">
+                        </rect>
+                    </pattern>
+                    <rect width="100%" height="100%" fill="url(#small-grid)">
+                    </rect>
+                </svg>
+                <div class="glow">
+                </div>
             </div>
-            <div class="bg-showreel">
+            <div class="container content-container">
+                <h1 class="h1">
+                    <span class="magic">
+                        <span class="magic-star">
+                            <svg viewBox="0 0 512 512">
+                                <path
+                                    d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+                            </svg>
+                        </span>
+                        <span class="magic-star">
+                            <svg viewBox="0 0 512 512">
+                                <path
+                                    d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+                            </svg>
+                        </span>
+                        <span class="magic-star">
+                            <svg viewBox="0 0 512 512">
+                                <path
+                                    d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+                            </svg>
+                        </span>
+                        <span class="magic-text">
+                            Namaste
+                        </span>
+                    </span>
+                    <span class="namaste-emote"><img src="./assets/namaste-emote.png" alt="🙏"></span>
+                </h1>
+            </div>
+            <!-- <div class="bg-showreel">
                 <video id="showreel-vid" loop playsinline autoplay muted controls="false">
                     <source src="./assets/showreel.mp4" type="video/mp4" />
                 </video>
-            </div>
+            </div> -->
         </section>
         <section class="hero-section screen-h d-flex align-items-center justify-content-center" id="sec-2">
             <div class="container welcome-lines">

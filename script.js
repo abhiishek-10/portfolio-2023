@@ -77,8 +77,11 @@ $(document).ready(function () {
 
         if (scroll >= 300) {
             $(".navbar").addClass("scrolled");
+            $('.bg-elems').css('opacity', 0);
+
         } else {
             $(".navbar").removeClass("scrolled");
+            $('.bg-elems').css('opacity', 1);
         }
     });
 
@@ -172,9 +175,7 @@ $(document).ready(function () {
                 "-=2"
             );
 
-        if ($('body').hasClass('home')) {
-            document.getElementById('showreel-vid').play();
-        }
+
         const buddhaObj = new Image();
         buddhaObj.src = "./assets/buddha.obj";
         buddhaObj.onload = function () {
