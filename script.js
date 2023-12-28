@@ -67,10 +67,57 @@ if (!ScrollTrigger.isTouch) {
 
 
 // Pre loader
+preLoader();
+function preLoader() {
+
+    const preLoaderTl = gsap.timeline();
+
+    preLoaderTl.to("body", {
+        overflow: "hidden"
+    })
+        .to(".preloader .text-container", {
+            duration: 0,
+            opacity: 1,
+            ease: "Power3.easeOut"
+        })
+        .from(".preloader .text-container p", {
+            duration: 1.5,
+            delay: 1,
+            y: 70,
+            skewY: 10,
+            stagger: 0.4,
+            ease: "Power3.easeOut"
+        })
+        .to(".preloader .text-container p", {
+            duration: 1.2,
+            y: 80,
+            skewY: -20,
+            stagger: 0.2,
+            ease: "Power3.easeOut"
+        })
+        .to(".preloader", {
+            duration: 1.5,
+            height: "0vh",
+            ease: "Power3.easeOut"
+        })
+        .to(
+            "body",
+            {
+                overflow: "hidden auto"
+            },
+            "-=2"
+        );
+
+
+    // const buddhaObj = new Image();
+    // buddhaObj.src = "./assets/buddha.obj";
+    // buddhaObj.onload = function () {
+    // };
+}
+
 $(document).ready(function () {
 
 
-    preLoader();
 
     $(window).scroll(function () {
         var scroll = $(window).scrollTop();
@@ -135,53 +182,7 @@ $(document).ready(function () {
     }
     openNav();
 
-    function preLoader() {
 
-        const preLoaderTl = gsap.timeline();
-
-        preLoaderTl.to("body", {
-            overflow: "hidden"
-        })
-            .to(".preloader .text-container", {
-                duration: 0,
-                opacity: 1,
-                ease: "Power3.easeOut"
-            })
-            .from(".preloader .text-container p", {
-                duration: 1.5,
-                delay: 1,
-                y: 70,
-                skewY: 10,
-                stagger: 0.4,
-                ease: "Power3.easeOut"
-            })
-            .to(".preloader .text-container p", {
-                duration: 1.2,
-                y: 80,
-                skewY: -20,
-                stagger: 0.2,
-                ease: "Power3.easeOut"
-            })
-            .to(".preloader", {
-                duration: 1.5,
-                height: "0vh",
-                ease: "Power3.easeOut"
-            })
-            .to(
-                "body",
-                {
-                    overflow: "hidden auto"
-                },
-                "-=2"
-            );
-
-
-        const buddhaObj = new Image();
-        buddhaObj.src = "./assets/buddha.obj";
-        buddhaObj.onload = function () {
-            $(".preloader").css("display", "none");
-        };
-    }
 
 
 
@@ -218,4 +219,6 @@ $(document).ready(function () {
 
 })
 
-
+$(window).load(function () {
+    $(".preloader").css("display", "none");
+})
