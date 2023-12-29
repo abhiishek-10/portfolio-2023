@@ -74,7 +74,7 @@ let scene = new THREE.Scene();
 
 const hdrEquirect = new RGBELoader()
 
-    .setPath('/assets/')
+    .setPath('./assets/')
     .load('ml_gradient_freebie_01.hdr', function () {
 
         hdrEquirect.mapping = THREE.EquirectangularReflectionMapping;
