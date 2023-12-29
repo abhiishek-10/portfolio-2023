@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek | Contact &nbsp; 💌</title>
+    <%- include('css-lib.ejs') %>
+
+</head>
+<div class="preloader">
+    <div class="text-container">
+        <p>Getting</p>
+        <p>You</p>
+        <p>There!</p>
+    </div>
+</div>
+
+<body>
+    <%- include('navbar.ejs') %>
+
+        <section class="contact-section  screen-h">
+            <div id="bg-blob"></div>
+            <div class="container">
+                <div class="contact-main">
+                    <div class="contact-header">
+                        <p class="navigation">/ Get in Touch</p>
+                        <h1 class="heading-2 ">Schedule an Appointment</h1>
+                    </div>
+                    <div class="contact-content">
+                        <form action="#">
+                            <p>Hey, my name is
+                                <span class="form-input">
+                                    <input type="text" name="fname" id="fname" placeholder="Your Full Name">
+                                </span>
+                                and I have a
+                                <span class="form-input">
+                                    <input type="text" name="job" id="job" placeholder="Website, Full-Time Job,etc.">
+                                </span>
+                                that I'd like to discuss with you. Get in touch with me at
+                                <span class="form-input">
+                                    <input type="email" name="email" id="email" placeholder="Your Email Address">
+                                </span>
+                                !
+                            </p>
+                            <div class="form-btn">
+                                <button type="submit" class="send-btn">
+                                    <span>Send Enquiry</span>
+                                </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <%- include('script-lib.ejs') %>
+            <script src="contact-script.js"></script>
+</body>
+
+</html>

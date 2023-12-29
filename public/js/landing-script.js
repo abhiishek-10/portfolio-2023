@@ -74,7 +74,7 @@ let scene = new THREE.Scene();
 
 const hdrEquirect = new RGBELoader()
 
-    .setPath('./assets/')
+    .setPath('/assets/')
     .load('ml_gradient_freebie_01.hdr', function () {
 
         hdrEquirect.mapping = THREE.EquirectangularReflectionMapping;
@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.innerWidth > 768) {
         document.querySelectorAll('.intro-preview').forEach(el => {
             gsap.to(el.querySelector('img'), {
-                y: 200,
+                y: 100,
                 scrollTrigger: {
                     trigger: el.querySelector('img'),
                     start: 'center center',
@@ -319,8 +319,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 300);
     }
     spawnBubbles()
-
-
 
 })
 
