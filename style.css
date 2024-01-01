@@ -1113,6 +1113,8 @@ section
 {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
 }
 
 .contact-content form>*
@@ -1124,8 +1126,18 @@ section
     line-height: 2;
     letter-spacing: 1px;
     color: var(--text-color);
+    transition: all 0.5s;
 }
 
+.main-fields
+{
+    z-index: 2;
+}
+
+.success-msg
+{
+    z-index: 0;
+}
 
 .contact-content .form-input
 {
@@ -1135,6 +1147,7 @@ section
 
 .contact-content .form-input input
 {
+    display: inline-block;
     width: fit-content;
     min-width: unset;
     border: none;
@@ -1146,6 +1159,11 @@ section
     color: var(--headline-color);
     border-bottom: 2px solid #ffffff52;
     transition: all 0.5s;
+}
+
+.contact-content .form-input input.error
+{
+    border-bottom: 2px solid #ff000052;
 }
 
 .contact-content .form-input input:focus
@@ -1163,6 +1181,11 @@ section
 .contact-content .form-btn
 {
     margin-top: 50px;
+}
+
+.contact-content .form-btn .form-loader
+{
+    opacity: 0;
 }
 
 .contact-content .form-btn .send-btn
@@ -1355,6 +1378,29 @@ section
 
 
 
+    /*=============================================
+    =            Contact Form            =
+    =============================================*/
+    .contact-content form p
+    {
+        font-size: 2rem;
+        line-height: 1.8;
+        letter-spacing: 0.5px;
+    }
+
+    .contact-content .form-input input,
+    .contact-content .form-input input::placeholder
+    {
+        font-size: 2rem;
+        line-height: 1.8;
+        letter-spacing: 0.5px;
+    }
+
+
+    /*=====  End of Contact Form  ======*/
+
+
+
 
 }
 
@@ -1441,6 +1487,31 @@ section
     {
         margin-inline: auto;
     }
+
+
+
+
+    /*=============================================
+    =            Contact form            =
+    =============================================*/
+
+    .contact-content .form-input input,
+    .contact-content .form-input input::placeholder
+    {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        letter-spacing: 0.5px;
+        display: inline-flex;
+    }
+
+    .contact-content .form-input
+    {
+        margin-inline: 10px;
+    }
+
+    /*=====  End of Contact form  ======*/
+
+
 }
 
 @media(max-width:576px)
@@ -1455,8 +1526,29 @@ section
     }
 
 
+    .contact-content form p
+    {
+        font-size: 1.8rem;
+        line-height: 1.8;
+    }
 
+    .contact-content .form-input input,
+    .contact-content .form-input input::placeholder
+    {
+        font-size: 1.25rem;
+        line-height: 1.2;
+        max-width: unset;
+    }
 
+    .contact-content .form-btn
+    {
+        margin-top: 20px;
+    }
 
+    .contact-content .form-btn .send-btn span
+    {
+        font-size: 1.2rem;
+        line-height: 2;
+    }
 
 }

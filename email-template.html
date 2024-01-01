@@ -1,0 +1,415 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+	<meta name="x-apple-disable-message-reformatting">
+	<!-- disable auto telephone linking in iOS -->
+	<title>nftiz</title>
+	<!--Google Font Integrated-->
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+	<style type="text/css">
+		/* Some resets and issue fixes */
+
+
+		#outlook a {
+			about-section-padding: 0;
+		}
+
+		body {
+			width: 100% !important;
+			size-adjust: 100%;
+			-ms-text-size-adjust: 100%;
+			margin: 0;
+			padding: 0;
+			print-color-adjust: exact !important;
+			-webkit-print-color-adjust: exact !important;
+		}
+
+		.ReadMsgBody {
+			width: 100%;
+		}
+
+		.ExternalClass {
+			width: 100%;
+		}
+
+		.backgroundTable {
+			margin: 0 auto;
+			padding: 0;
+			width: 100%;
+		}
+
+		table td {
+			border-collapse: collapse;
+		}
+
+		/* End reset */
+		html {
+			width: 100%
+		}
+
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+			height: 100% !important;
+			width: 100% !important;
+		}
+
+		/* What it does: Stops email clients resizing small text. */
+		* {
+			-ms-text-size-adjust: 100%;
+			-webkit-text-size-adjust: 100%;
+		}
+
+		body {
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			-webkit-font-smoothing: antialiased;
+			font-family: 'Lato', sans-serif;
+			-webkit-text-size-adjust: none;
+			-ms-text-size-adjust: none
+		}
+
+		table {
+			border-spacing: 0;
+			border-collapse: collapse
+		}
+
+		table td {
+			border-collapse: collapse
+		}
+
+		table tr {
+			border-collapse: collapse
+		}
+
+		img {
+			display: block !important
+		}
+
+		br,
+		strong br,
+		b br,
+		em br,
+		i br {
+			line-height: 100%
+		}
+
+		a {
+			text-decoration: none
+		}
+
+		/* These are our tablet/medium screen media queries */
+		@media screen and (max-width: 630px) {
+
+			img {
+				width: 100% !important;
+			}
+
+			/* Display block allows us to stack elements */
+			*[class="mobile-column"] {
+				display: block !important;
+			}
+
+			*[class="col-600"] {
+				width: 100% !important;
+			}
+
+			/* Some more stacking elements */
+			*[class="mob-column"] {
+				float: none !important;
+				width: 100% !important;
+			}
+
+			/* Hide stuff */
+			*[class="hide"] {
+				display: none !important;
+			}
+
+			/* This sets elements to 100% width and fixes the height issues too, a god send */
+			*[class="100p"] {
+				width: 100% !important;
+				height: auto !important;
+			}
+
+			/* For the 2x2 stack */
+			*[class="condensed"] {
+				padding-bottom: 40px !important;
+				display: block;
+			}
+
+			/* Centers content on mobile */
+			*[class="center"] {
+				text-align: center !important;
+				width: 100% !important;
+				height: auto !important;
+			}
+
+			/* 100percent width section with 20px padding */
+			*[class="100pad"] {
+				width: 100% !important;
+				padding: 20px;
+			}
+
+			/* 100percent width section with 20px padding left & right */
+			*[class="100padleftright"] {
+				width: 100% !important;
+				padding: 0 20px 0 20px;
+			}
+
+			/* 100percent width section with 20px padding top & bottom */
+			*[class="100padtopbottom"] {
+				width: 100% !important;
+				padding: 20px 0px 20px 0px;
+			}
+
+
+		}
+
+		@media only screen and (max-width: 600px) {
+			*[class="gmail-fix"] {
+				display: none !important;
+			}
+		}
+	</style>
+
+
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" offset="0" yahoo="fix" style="margin:0; padding:0; -webkit-text-size-adjust:none; -ms-text-size-adjust:none; background: rgb(52,120,224);
+	background: linear-gradient(90deg, rgba(52, 121, 224, 0.545) 0%, rgba(82, 237, 188, 0.504) 100%);">
+
+
+
+	<div
+		style="display:none; white-space:nowrap; font:15px courier; color:#ffffff; line-height:0; width:600px !important; min-width:600px !important; max-width:600px !important;">
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		&nbsp;
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+
+	<table cellspacing="0" cellpadding="0" border="0" width="100%" class="" align="center" style="   background: rgb(52,120,224);
+	background: linear-gradient(90deg, rgba(52, 121, 224, 0.545) 0%, rgba(82, 237, 188, 0.504) 100%); ">
+		<tr>
+			<td>
+				<table cellspacing="0" cellpadding="0" border="0" width="100%" class="ReadMsgBody" align="center"
+					style="background: #f5f5f5;">
+					<tr>
+						<td style="line-height: 0px;" height="32"></td>
+					</tr>
+				
+					<tr>
+						<td>
+							<table width="600" cellpadding="0" cellspacing="0" align="center">
+								<tr>
+									<td>
+										<table width="550" cellpadding="0" cellspacing="0" align="center" bgcolor="#fff"
+											style="border-radius: 20px 20px 0px 0px; box-shadow: 0px 0px 15px rgba(66, 66, 66, 0.2);">
+											<tr>
+												<td style="height:24px;"></td>
+											</tr>
+											<tr>
+												<td style="text-align: center;">
+													<table width="500" align="center">
+														<tr>
+															<td
+																style="padding: 20px ; border-radius: 16px; background: whitesmoke; text-align: left; ">
+																<a
+																	style="width: 80px; height: 80p; margin-right: 20px; float: left; ">
+																	<img src="https://ipfs.io/ipfs/QmYjoNXrViGsyyy49vPGBUkSb6QTfM3J3KtGK3bB5HtY1H"
+																		alt="nft-img"
+																		style="width: 100%;  object-fit: cover; object-position: center center; border-radius: 12px; ">
+																</a>
+																<span>
+																	<h3>New Query from
+																		Portfolio</h3>
+
+																</span>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											<tr>
+												<td style="height:12px;"></td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellspacing="0" cellpadding="0" border="0" width="100%" class="ReadMsgBody" align="center">
+					<tr>
+						<td>
+							<table cellspacing="0" cellpadding="0" border="0" width="600" align="center">
+								<tr>
+									<td>
+										<table cellspacing="0" cellpadding="0" border="0" width="550" align="center">
+											<tr>
+												<td
+													style="font-size: 16px; line-height: 26px; color: #424242; background: #fff; border-radius: 0px 0px 20px 20px;">
+													<table width="100%" border="0" align="center" cellpadding="0"
+														cellspacing="0" bgcolor="#fff"
+														style=" background: #FFFFFF;  border-radius: 0px 0px 20px 20px;">
+
+														<tr>
+															<td
+																style="background: #fff; border-radius: 0px 0px 20px 20px; ">
+																<table width="500" border="0" align="center"
+																	cellpadding="0" cellspacing="0" bgcolor="#fff">
+																	<tr>
+																		<td style=" line-height: 0px;" height="28">
+																		</td>
+																	</tr>
+																	<tr>
+																		<td align="center"
+																			style="font-size: 28px; line-height: 26px; color: #000; font-weight: 600;">
+																			Hey Abhishek!
+																		</td>
+																	</tr>
+																	<tr>
+																		<td style=" line-height: 0px;" height="24">
+																		</td>
+																	</tr>
+
+																	<tr>
+																		<td style=" line-height: 0px;" height="16">
+																		</td>
+																	</tr>
+																	<tr>
+																		<td
+																			style="text-align: center; font-size: 18px; line-height: 25px; color: #1D2733; font-weight: 400;">My name is
+																			<b>{{fname}}</b> and I have a  <b>{{job}}</b>  that I'd like to discuss with you. Get in touch with me at <a href="mailto:"+ {{email}} >{{email}}</a>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td style=" line-height: 0px;" height="24">
+																		</td>
+																	</tr>
+
+																	<tr>
+																		<td style=" line-height: 0px;" height="16">
+																		</td>
+																	</tr>
+																	<tr>
+																		<td
+																			style="text-align: center;font-size: 16px; margin: 0; line-height: 22px;  color: #1d2733;">
+																			<a href="mailto:"+ {{email}} 
+																				style="padding: 12px 55px; border-radius: 12px; font-size: 18px; line-height: 32px; text-decoration: none; color: #ffffff; background-color: #366ce3;">
+																				Contact</a>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td style=" line-height: 0px;" height="24">
+																		</td>
+																	</tr>
+																	<tr>
+																		<td style=" line-height: 0px;" height="16">
+																		</td>
+																	</tr>
+																	<tr>
+																		<td
+																			style="padding-inline: 15px; text-align: left; font-size: 16px; line-height: 28px; color: #232323;">
+																			Best Regards,
+																		</td>
+																	</tr>
+																	<tr>
+																		<td
+																			style="padding-inline: 15px; text-align: left; font-size: 18px; font-weight: normal; line-height: 28px; font-weight: 600; color: #1D2733;">
+																			{{fname}}
+																		</td>
+																	</tr>
+
+
+																	<tr>
+																		<td style=" line-height: 0px;" height="52">
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+
+													</table>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td style="height:25px;"></td>
+		</tr>
+		<!-- test start -->
+	
+		<!-- test ends -->
+		<tr>
+			<td style="height:25px;"></td>
+		</tr>
+
+
+
+
+		<tr>
+			<td style="height:25px;"></td>
+		</tr>
+		<tr>
+			<td style="text-align: center; font-size: 16px; line-height: 28px; color: white;">
+				Copyright &copy; 2024, <b>Creative</b>
+			</td>
+		</tr>
+		<tr>
+			<td style="height: 32px;"></td>
+		</tr>
+	</table>
+
+
+
+
+
+	<!--Main Table End-->
+
+	<table class="gmail-app-fix">
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="600">
+					<tr>
+						<td cellpadding="0" cellspacing="0" border="0" height="1" ;
+							style="line-height: 1px; min-width: 200px;">
+							<img src="transparent.gif" width="200" height="1"
+								style="display: block; max-height: 1px; min-height: 1px; min-width: 200px; width: 200px;" />
+						</td>
+						<td cellpadding="0" cellspacing="0" border="0" height="1" ;
+							style="line-height: 1px; min-width: 200px;">
+							<img src="transparent.gif" width="200" height="1"
+								style="display: block; max-height: 1px; min-height: 1px; min-width: 200px; width: 200px;" />
+						</td>
+						<td cellpadding="0" cellspacing="0" border="0" height="1" ;
+							style="line-height: 1px; min-width: 200px;">
+							<img src="transparent.gif" width="200" height="1"
+								style="display: block; max-height: 1px; min-height: 1px; min-width: 200px; width: 200px;" />
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</body>
+
+</html>
